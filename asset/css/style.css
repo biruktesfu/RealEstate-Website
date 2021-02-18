@@ -55,3 +55,7 @@ i {
 
 /*pofile css*/
 
+#sellers:hover{
+    color:red;
+    text-decoration: none;
+}
