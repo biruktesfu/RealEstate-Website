@@ -8,6 +8,10 @@ const  address = document.getElementById("address").value
 const  email = document.getElementById("email").value
 
 
+
+
+
+
 db.profile.put({ username:username,password:password,email:email, address:address, fullname:fullname, contact:contact})}
 
 var db = new Dexie("3BM_DATABASE");
@@ -17,7 +21,30 @@ var db = new Dexie("3BM_DATABASE");
               house :'++,tobe,img,location,amount,bedroom,floor'
           });
 
-          //
-          // Put some data into it
-          //
-          
+
+
+// for entering data to the profile page
+const data = ()=>{
+const mainname_profile = document.getElementById("main_name");
+const fullname_profile = document.getElementById("name_profile")
+const username_profile = document.getElementById("username_profile")
+const contact_profile = document.getElementById("contact_profile")
+const  address_profile = document.getElementById("address_profile")
+const  email_profile = document.getElementById("email_profile")
+
+    db.profile.count((count) =>{
+        if(count){
+            db.profile.each(table=>{
+                mainname_profile.innerHTML = table.fullname;
+                fullname_profile.innerHTML= table.fullname;
+                username_profile.innerHTML = table.username;
+                contact_profile.innerHTML = table.contact;
+                address_profile.innerHTML = table.address;
+                email_profile.innerHTML = table.email;
+            })
+        }
+    })
+}
+
+
+data();
