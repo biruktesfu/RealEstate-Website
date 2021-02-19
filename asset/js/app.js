@@ -12,7 +12,10 @@ const  email = document.getElementById("email").value
 
 
 
-db.profile.put({ username:username,password:password,email:email, address:address, fullname:fullname, contact:contact})}
+db.profile.put({ username:username,password:password,email:email, address:address, fullname:fullname, contact:contact})
+alert("account successfully created");
+window.location.replace("profile.html");
+}
 
 var db = new Dexie("3BM_DATABASE");
 
