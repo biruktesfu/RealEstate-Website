@@ -21,7 +21,7 @@ var db = new Dexie("3BM_DATABASE");
 
           db.version(1).stores({
               profile: '++,username,password,email,address,fullname,contact',
-              house :'++,tobe,img,location,amount,bedroom,floor'
+              house :'id,tobe,img,location,amount,bedroom,floor'
           });
 
 
