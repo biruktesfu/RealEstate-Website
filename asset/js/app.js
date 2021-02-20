@@ -51,3 +51,26 @@ const  email_profile = document.getElementById("email_profile")
 
 
 data();
+
+
+//for login page
+
+
+login.addEventListener('click', login_click)
+
+
+function login_click(){
+    let login_username = document.getElementById("login_username").value
+    let login_password = document.getElementById("login_password").value
+    let login = document.querySelector("#login")
+db.profile.each(user => {
+    if(login_username == user.username && login_password == user.password){
+
+        alert("sucessful")
+    }else{
+        alert("username or password incorrect")
+
+    }
+})
+
+}
