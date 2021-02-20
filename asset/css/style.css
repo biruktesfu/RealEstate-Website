@@ -49,3 +49,7 @@ i {
     -moz-appearance: none;
     appearance: none;
 }
+
+h1 , h4 {
+    color: azure;
+}
