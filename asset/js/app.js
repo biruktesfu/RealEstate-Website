@@ -8,20 +8,28 @@ const  address = document.getElementById("address").value
 const  email = document.getElementById("email").value
 
 
-
-
-
-
 db.profile.put({ username:username,password:password,email:email, address:address, fullname:fullname, contact:contact})
 alert("account successfully created");
 window.location.replace("profile.html");
+}
+function sellahouse(){
+    const house_location = document.getElementById("city").value
+    const img = document.getElementById("image").value
+    const amount = document.getElementById("price").value
+    const  bedroom = document.getElementById("room_number").value
+    const  floor = document.getElementById("floor_number").value
+    const modal = document.getElementById("sellModal")
+   
+    db.house.put({tobe:"sold",img:img,location:house_location,amount:amount,bedroom:bedroom,floor:floor})
+    alert("house  successfully published");
+    window.location.replace("profile.html");
 }
 
 var db = new Dexie("3BM_DATABASE");
 
           db.version(1).stores({
               profile: '++,username,password,email,address,fullname,contact',
-              house :'baby,tobe,img,location,amount,bedroom,floor'
+              house :'++,tobe,img,location,amount,bedroom,floor',
           });
 
 
@@ -65,12 +73,22 @@ function login_click(){
     let login = document.querySelector("#login")
 db.profile.each(user => {
     if(login_username == user.username && login_password == user.password){
-
-        alert("sucessful")
-    }else{
-        alert("username or password incorrect")
-
+        window.location.replace("profile.html");
+        db.profile.count((count) =>{
+            if(count){
+                db.profile.each(table=>{
+                    mainname_profile.innerHTML = table.fullname;
+                    fullname_profile.innerHTML= table.fullname;
+                    username_profile.innerHTML = table.username;
+                    contact_profile.innerHTML = table.contact;
+                    address_profile.innerHTML = table.address;
+                    email_profile.innerHTML = table.email;
+                })
+            }
+        })
+       
     }
+
 })
 
 }
