@@ -20,7 +20,7 @@ function sellahouse(){
     const  floor = document.getElementById("floor_number").value
     const modal = document.getElementById("sellModal")
    
-    db.house.put({tobe:"sold",img:img,location:house_location,amount:amount,bedroom:bedroom,floor:floor})
+    db.house.put({tobe:"FOR SELL",img:img,location:house_location,amount:amount,bedroom:bedroom,floor:floor})
     alert("house  successfully published");
     window.location.replace("profile.html");
 }
@@ -59,6 +59,28 @@ const  email_profile = document.getElementById("email_profile")
 
 
 data();
+const display = ()=>{
+    const dlocation = document.getElementById("dlocation");
+    const damount = document.getElementById("damount")
+    const dbedroom = document.getElementById("dbedroom")
+    const dfloor = document.getElementById("dfloor")
+    const img =  document.getElementById("img")
+    const dtobe =  document.getElementById("dtobe")
+        db.profile.count((count) =>{
+            if(count){
+                db.house.each(table=>{
+                    dlocation.innerHTML = table.location;
+                    damount.innerHTML= table.amount;
+                    dbedroom.innerHTML = table.bedroom;
+                    dfloor.innerHTML = table.floor;
+                    dtobe.innerHTML = table.tobe;
+                    img.innerHTML=`<img class="card-img-top" src = "${table.img}">`;})
+            }
+        })
+    }
+ display()   
+    
+
 
 
 //for login page
