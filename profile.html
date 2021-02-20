@@ -39,7 +39,10 @@
                                 <div class="mt-4">
                                     <h4 id="main_name">John Doe</h4>
                                     <button class="btn btn-primary" data-toggle="modal" data-target="#sellModal">sell a house</button>
-                                    <button class="btn btn-outline-primary">rent a house</button>
+                                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#rentModal">rent a house</button>
+                                    <div class="mt-4">
+                                        <button class="btn btn-outline-primary">my listings</button>
+                                    </div>
                                     <div class="modal fade" id="sellModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -77,95 +80,143 @@
 
                                                     </div>
                                                 </div>
+
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <div class="signup-section text-white">you wanted to rent? <button class="btn btn-primary">rent a house</button></div>
+                                                <div class="signup-section text-white">you wanted to rent? <button class="btn btn-primary" data-toggle="modal" data-target="#rentModal">rent a house</button></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-4">
-                                    <button class="btn btn-outline-primary">my listings</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
 
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <div id="name_profile">
-                                        Kenneth Valdez
-                                    </div>
+                                <div class="modal fade" id="rentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-bottom-0">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-title text-center">
+                                                    <h4>RENT A HOUSE!</h4>
+                                                </div>
+                                                <div class="d-flex flex-column text-center">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="city" placeholder="House Location...">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="image" placeholder="Link of quality house photos..">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" id="price" placeholder="Exact price of house...">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" id="room_number" placeholder="Exact number of rooms...">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" id="floor_number" placeholder="Number of floor/s without Ground...">
+                                                        </div>
+                                                        <button type="button" class="btn btn-primary btn-block btn-round">Publish</button>
+                                                    </form>
 
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-
-
-                                    <div id="email_profile">
-                                        fip@jukmuh.al
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
+                                                    <div class="text-center text-muted delimiter">we are happy to work with you</div>
 
 
+                                                </div>
+                                            </div>
 
-                                    <div id="address_profile">
-                                        place
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Contact</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <div id="contact_profile">(320) 380-4539</div>
-
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Username</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <div id="username_profile">
-                                        @username
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <div class="signup-section text-white">Do you want to sell? <button class="btn btn-primary" data-toggle="modal" data-target="#sellModal">Sell a house</button></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
+
 
                         </div>
                     </div>
-
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <div id="name_profile">
+                                    Kenneth Valdez
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+
+
+                                <div id="email_profile">
+                                    fip@jukmuh.al
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+
+
+
+                                <div id="address_profile">
+                                    place
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Contact</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <div id="contact_profile">(320) 380-4539</div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Username</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <div id="username_profile">
+                                    @username
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
     </div>
     <script src="asset/js/app.js"></script>
     <script src="asset/js/profile.js"></script>
