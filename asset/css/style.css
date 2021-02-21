@@ -49,3 +49,10 @@ i {
     -moz-appearance: none;
     appearance: none;
 }
+
+section{
+    padding-top: 10px;
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-bottom: 50px;
+}
