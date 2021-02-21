@@ -39,7 +39,7 @@
                                 <div class="mt-4">
                                     <h4 id="main_name">John Doe</h4>
                                     <button class="btn btn-primary" data-toggle="modal" data-target="#sellModal">sell a house</button>
-                                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#rentModal">rent a house</button>
+                                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#rentModal" aria-hidden="true">rent a house</button>
                                     <div class="mt-4">
                                         <button class="btn btn-outline-primary">my listings</button>
                                     </div>
@@ -48,8 +48,8 @@
                                             <div class="modal-content">
                                                 <div class="modal-header border-bottom-0">
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">×</span>
-</button>
+                                        <span aria-hidden="true">×</span>
+                                        </button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-title text-center">
@@ -83,7 +83,7 @@
 
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <div class="signup-section text-white">you wanted to rent? <button class="btn btn-primary" data-toggle="modal" data-target="#rentModal">rent a house</button></div>
+                                                <div class="signup-section text-white">you wanted to rent? <button class="btn btn-primary" data-toggle="modal" data-target="#rentModal" id ="rent_house">rent a house</button></div>
                                             </div>
                                         </div>
                                     </div>

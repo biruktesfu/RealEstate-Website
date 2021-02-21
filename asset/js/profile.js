@@ -1,5 +1,7 @@
 
-function rentahouse(){}
+function rentahouse(){
+    
+}
 
 
 
