@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,145 +9,167 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./asset/css/footer.css">
-    
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
-      </style>
 
-      <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+    </style>
+
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <title>Index</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!--Nav-->
     <nav class="navbar  bg-white text-white">
-      <a class="navbar-brand" href="index.html">3BM</a>
-      <div class="d-flex justify-content-start">
-        <div class="navbar navbar-light bg-light"><a href="login.html">Login</a></div>
-        <div class="navbar navbar-light bg-light"><a href="create_account.html">Register</a></div>
-        <div class="navbar navbar-light bg-light"><a href="about.html">About</a></div>
-        <div class="navbar navbar-light bg-light"><a href="info.html">Help</a></div>
-        
-      </div>
+        <a class="navbar-brand" href="index.html">3BM</a>
+        <div class="d-flex justify-content-start">
+            <div class="navbar navbar-light bg-light"><a href="login.html">Login</a></div>
+            <div class="navbar navbar-light bg-light"><a href="create_account.html">Register</a></div>
+            <div class="navbar navbar-light bg-light"><a href="about.html">About</a></div>
+            <div class="navbar navbar-light bg-light"><a href="info.html">Help</a></div>
+
+        </div>
     </nav>
 
     <!--Jumbotron-->
     <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="text-white">3BM</h1>
-        <h4 class="text-white">Move to What Moves You</h2>
-          <div class="input-group input-group-lg">
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-            <button type="button" class="btn btn-outline-dark">Search</button>
-          </div>
-      </div>
+        <div class="container">
+            <h1 class="text-white">3BM</h1>
+            <h4 class="text-white">Move to What Moves You</h2>
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <button type="button" class="btn btn-outline-dark">Search</button>
+                </div>
+        </div>
     </section>
 
     <!--Card-->
     <div class="container ">
-      
-      <h1></h1>
-      <div class="card-deck">
 
-        <div class="card" >
-          
-          <div class="card-body">
-            <div id="img"></div>
-          <h5 class="card-title text-danger" id="dtobe"></h5>
-            
-            
-            <div class="row" >
-              <div class="col-md-4"><h3>location:</h3></div><div class="col"><h3 id="dlocation"></h3></div>
+        <h1></h1>
+        <div class="card-deck">
+
+            <div class="card">
+
+                <div class="card-body">
+                    <div id="img"></div>
+                    <h5 class="card-title text-danger" id="dtobe"></h5>
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>location:</h3>
+                        </div>
+                        <div class="col">
+                            <h3 id="dlocation"></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>amount:</h3>
+                        </div>
+                        <div class="col">
+                            <h3 id="damount"></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>bedroom:</h3>
+                        </div>
+                        <div class="col">
+                            <h3 id="dbedroom"></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>floor:
+                                <h3>
+                        </div>
+                        <div class="col">
+                            <h3 id="dfloor"></h3>
+                        </div>
+                    </div>
+                    <a href="/contact.html" class="btn btn-primary ">Contact Seller</a>
+                </div>
             </div>
-            <div class="row" >
-              <div class="col-md-4"><h3>amount:</h3></div><div class="col"><h3 id="damount"></h3></div>
-            </div>
-            <div class="row" >
-              <div class="col-md-4"><h3>bedroom:</h3></div><div class="col"><h3 id="dbedroom"></h3></div>
-            </div>
-            <div class="row" >
-              <div class="col-md-4"><h3>floor:<h3></div><div class="col"><h3 id="dfloor"></h3></div>
-            </div>
-            <a href="#" class="btn btn-primary ">Contact Seller</a>
-          </div>
+
+
+
         </div>
 
-        
-        
-      </div>
-      
     </div>
 
     <!--Footer-->
     <footer>
-      <link rel="stylesheet" href="asset/css/style.css">
-   
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-4 col-md-6">
-            <h3>location</h3>
-            <ul class="list-unstyled three-column">
-              
-            </ul>
-            <ul class="list-unstyled socila-list">
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-            </ul>
-          </div>
-          
-          <div class="col-lg-4 col-md-6">
-            <h3>latest transactions</h3>
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Programming</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
+        <link rel="stylesheet" href="asset/css/style.css">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <h3>location</h3>
+                    <ul class="list-unstyled three-column">
+
+                    </ul>
+                    <ul class="list-unstyled socila-list">
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                        <li><img src="http://placehold.it/48x48" alt="" /></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h3>latest transactions</h3>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="http://placehold.it/64x64" alt="" class="media-object" />
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Programming</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="http://placehold.it/64x64" alt="" class="media-object" />
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Coding</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="http://placehold.it/64x64" alt="" class="media-object" />
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Web Sesign</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <h3>Our Work</h3>
+                    <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+                    <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+                    <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+                    <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+                </div>
+
             </div>
-            
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Coding</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
-            
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Web Sesign</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
-            
-          </div>
-          
-          <div class="col-lg-4">
-            <h3>Our Work</h3>
-            <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-            <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-            <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-            <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-          </div>
-          
         </div>
-      </div>
-      <div class="copyright text-center">
-        Copyright &copy; 2021 <span>3BM</span>
-      </div>
+        <div class="copyright text-center">
+            Copyright &copy; 2021 <span>3BM</span>
+        </div>
     </footer>
 
 
@@ -155,6 +178,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-   
-  </body>
+
+</body>
+
 </html>
