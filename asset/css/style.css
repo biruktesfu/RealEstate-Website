@@ -49,13 +49,3 @@ i {
     -moz-appearance: none;
     appearance: none;
 }
-
-
-
-
-/*pofile css*/
-
-#sellers:hover{
-    color:red;
-    text-decoration: none;
-}
