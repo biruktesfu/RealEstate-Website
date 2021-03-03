@@ -1,6 +1,8 @@
 
 function createaccount(){
-const fullname = document.getElementById("fullname").value
+    if((confirmpassword()) & (validatephonenumber(contact)) & (validateusername(firstname))& (validateusername(lastname))){
+const firstname = document.getElementById("firstname").value
+const lastname = document.getElementById("lastname").value
 const username = document.getElementById("chosen_username").value
 const password = document.getElementById("password").value
 const  contact = document.getElementById("contact").value
@@ -8,9 +10,18 @@ const  address = document.getElementById("address").value
 const  email = document.getElementById("email").value
 
 
-db.profile.put({ username:username,password:password,email:email, address:address, fullname:fullname, contact:contact})
+
+db.profile.put({ username:username,password:password,email:email, address:address, fullname:firstname+lastname, contact:contact})
 alert("account successfully created");
-window.location.replace("profile.html");
+window.location.replace("profile.html");}
+else if (!confirmpassword()){
+    alert("password does not match")
+}
+
+else if (!validatephonenumber(contact)){
+    alert("please enter the correct phone number")
+}
+
 }
 function sellahouse(){
     const house_location = document.getElementById("city").value
@@ -113,4 +124,53 @@ db.profile.each(user => {
 
 })
 
+}
+function confirmpassword()
+{
+    const password = document.getElementById("password").value
+    const password1 = document.getElementById("password1").value
+        if(password != password1) {
+            console.log("password does not match1")
+    
+          return false
+        } else if (password == password1){
+            console.log(password)
+            console.log(password1)
+            console.log("password matchs")
+          return true
+        }
+        else{
+            
+        }
+      }
+      
+     // password.onchange = validatePassword;
+      //password1.onkeyup = validatePassword;
+function validateusername(firstname){
+    if(firstname ===''){
+        alert("name cannot be empty")
+        return false
+    }
+    else if ( /[0-9]+/g.test(firstname.value)) {
+               alert("name should only be alphabet")
+                return false;}
+    else{
+        return true;
+    }
+        }
+   
+
+function validatephonenumber(inputtxt)
+{
+  var phoneno = /^\d{10}$/;
+  if(inputtxt.value ===''){
+      return false
+  }
+  if((inputtxt.value.match(phoneno))){
+      return true
+  }
+  else{
+      return false
+  }
+   
 }
