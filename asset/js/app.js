@@ -13,8 +13,21 @@ const  state= document.getElementById("state").value
 
 
 db.profile.put({ username:username,password:password,email:email, state:state,city:city, fullname:firstname+lastname, contact:contact})
+sessionStorage.setItem('newusername', username);
+sessionStorage.removeItem('username')
 alert("account successfully created");
-window.location.replace("profile.html");}
+window.location.replace("profile.html");
+let newusername = sessionStorage.getItem('newusername');
+db.profile.get({username: newusername})
+.then(data => {
+    mainname_profile.innerHTML = data.fullname;
+        fullname_profile.innerHTML= data.fullname;
+        username_profile.innerHTML = data.username;
+        contact_profile.innerHTML = data.contact;
+        address_profile.innerHTML = data.state;
+        email_profile.innerHTML = data.email;
+ })
+}
 else if (!confirmpassword()){
     alert("password does not match")
 }
@@ -94,11 +107,23 @@ function login_click(){
    db.profile.each(user => {
         if(login_username == user.username && login_password == user.password){
             sessionStorage.setItem('username', login_username);
-            
+            sessionStorage.removeItem('newusername')
+            db.profile.count((count) =>{
+                if(count){
+                    db.profile.each(table=>{
+                        mainname_profile.innerHTML = table.fullname;
+                        fullname_profile.innerHTML= table.fullname;
+                        username_profile.innerHTML = table.username;
+                        contact_profile.innerHTML = table.contact;
+                        address_profile.innerHTML = table.address;
+                        email_profile.innerHTML = table.email;
+                    })
+                }
+            })
              window.location.replace("profile.html");
     } })}
 function getprofile(){
-    const mainname_profile = document.getElementById("main_name");
+const mainname_profile = document.getElementById("main_name");
 const fullname_profile = document.getElementById("name_profile")
 const username_profile = document.getElementById("username_profile")
 const contact_profile = document.getElementById("contact_profile")
@@ -106,7 +131,9 @@ const  address_profile = document.getElementById("address_profile")
 const  email_profile = document.getElementById("email_profile")
 
     let username = sessionStorage.getItem('username');
-    db.profile.get({username: username})
+    let newusername = sessionStorage.getItem('newusername');
+    if(username){
+    db.profile.get({username: username  })
             .then(data => {
                 mainname_profile.innerHTML = data.fullname;
                     fullname_profile.innerHTML= data.fullname;
@@ -114,8 +141,19 @@ const  email_profile = document.getElementById("email_profile")
                     contact_profile.innerHTML = data.contact;
                     address_profile.innerHTML = data.state;
                     email_profile.innerHTML = data.email;
-             })
+             })}
+    else{
+        db.profile.get({username: newusername  })
+        .then(data => {
+            mainname_profile.innerHTML = data.fullname;
+                fullname_profile.innerHTML= data.fullname;
+                username_profile.innerHTML = data.username;
+                contact_profile.innerHTML = data.contact;
+                address_profile.innerHTML = data.state;
+                email_profile.innerHTML = data.email;
+         })}
 }
+
 function sellahouse(){
     var x = document.getElementById("username_profile").textContent;
    db.profile.get({username: x})
