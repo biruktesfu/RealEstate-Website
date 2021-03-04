@@ -28,21 +28,31 @@
               </div>
               <form action="#" method="post">
                 <div class="form-group first">
-                  <label for="username">Full name</label>
-                  <input type="username" class="form-control" placeholder="Your Full Name" id="fullname">
-                  
+                  <label for="text">Name</label>
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name" id="firstname">
+                    </div>
+                                      <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name" id="lastname">
+                    </div>
+                  </div>
                 </div>
                 
                 <div class="mb-3">
                   <label for="email">Email </label>
                   <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                  <div class="invalid-feedback">Please enter a valid email address for shipping updates.
-                  </div>
+                
                 </div>  
 
                 <div class="mb-3">
-                  <label for="address">Address</label>
-                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                  <label for="address">State/Region</label>
+                  <input type="text" class="form-control" id="state" placeholder="oromia" required="">
+                 
+                </div>
+                <div class="mb-3">
+                  <label for="address">City</label>
+                  <input type="text" class="form-control" id="city" placeholder="adama" required="">
                   <div class="invalid-feedback">
                     Please enter your shipping address.
                   </div>
@@ -65,6 +75,10 @@
                 <div class="form-group last mb-3">
                   <label for="password">Password</label>
                   <input type="password" class="form-control" placeholder="password" id="password">
+                </div>
+                <div class="form-group last mb-3">
+                  <label for="password">Confirm password</label>
+                  <input type="password" class="form-control" placeholder="password" id="password1">
                 </div>
                 <input type="button" value="CreateAccount" class="btn btn-block btn-primary" onclick="createaccount()">
                 <h4 style="padding-top: 15px; padding-left: 10px;">Already have an account?<a href="login.html" class="forgot-pass">&nbsp; log in</a></h4>

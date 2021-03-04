@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="getprofile()"></body>>
 
     <div class="container" id="personal_space">
         <div class="main-body">
@@ -40,8 +40,10 @@
                                     <h4 id="main_name">John Doe</h4>
                                     <button class="btn btn-primary" data-toggle="modal" data-target="#sellModal">sell a house</button>
                                     <button class="btn btn-outline-primary" data-toggle="modal" data-target="#rentModal">rent a house</button>
-                                    <div class="mt-4">
-                                        <button class="btn btn-outline-primary">my listings</button>
+                                    <div class="mt-4" id="inp">
+                                        <input type="text" id="inp">
+                                        <button id="test">test</button>
+                                        <button class="btn btn-outline-primary"> <a href="mylisting.html" target="_blank">MyListings</a></button>
                                     </div>
                                     <div class="modal fade" id="sellModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
